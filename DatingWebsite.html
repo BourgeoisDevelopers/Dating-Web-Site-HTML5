@@ -1,0 +1,126 @@
+<!doctype html> 
+<html>
+<head> 
+<title> Dating Website </title> 
+<meta name="author" content="Amanda Bourgeois">
+<style>
+	fieldset  {
+			background-color:lightyellow;
+			border:10px solid yellow;
+			margin-bottom:10px;
+			width:720px;
+			}
+	label  {
+			width:180px;
+			display:inline-block;
+			text-align:right;
+			text-align:top;
+			}
+	#contact, #gender  {
+			width:auto;
+			}
+	#height #salary  {
+			text-align:center;
+			}
+	#address  {
+			width:360px;
+			height:50px;
+			position:absolute;
+			}
+	#meas1  {
+			background-color:brown;
+			color:white;
+			padding:5px;
+			display:inline-block;
+			}
+	#meas2  {
+			background-color:purple;
+			color:white;
+			padding:5px;
+			}
+	#income1  {
+			background-color:brown;
+			backgroun-size:10px 20px;
+			color:white;
+			padding:5px;
+			}
+	#income2  {
+			background-color:purple;
+			color:white;
+			padding:5px;
+			}
+	#age	{
+			width:45px;
+			}
+	label:hover {
+			font-size:40px;
+			}
+	input:hover {
+			font-size:40px;
+			}
+</style>
+</head>
+
+<body> 
+<h1> Please Enter Your Details For Our Dating Website! </h1> 
+
+<form method="post" enctype="multipart/form-data"
+	action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php"> 
+	
+<fieldset>
+	<legend> Your Face </legend> 
+		<label for="Image">Your Image:</label> 
+			<input type= "file" id="preview" name="preview" placeholder="Choose Your Image" required><br> 
+		<label for="preview">Image Preview:</label> 
+	<img>
+</fieldset>
+
+<fieldset>
+	<legend> Your General Details </legend> 
+		<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="Your Full Name" required><br>
+		<label for="gender">Gender:</label> 
+			<input type="radio" id="gender" name="gender">Female<input type="radio">Male<br>
+		<label for="age">Age:</label>
+			<input type="number" id="age" name="age" required><br>
+		<label for="birthday">Date of Birth:</label> 
+			<input type="date" id="birthday" name="birthday" placeholder="mm/dd/yyy"><br> 
+		<label for="color">Favorite color:</label>
+			<input type="color" id="color" name="color"><br>
+		<label for="country">Which Country:</label>
+			<select name="country">
+				<option value="USA">United States</option>
+				<option value="CAN">Canada</option>
+				<option value="FRA">France</option>
+				<option value="JPN">Japan</option>
+				<option value="CHN">China</option>
+				<option value="KOR">South Korea</option>
+			</select><br>
+</fieldset> 
+
+<fieldset> 
+	<legend> Your Indicators </legend> 
+		<label for="Height">Height:</label> 
+		<span id="meas1"> Short</span><input type="range" min="0" max="100" step="5" value="50" 
+			id="height" name="height"> <span id="meas2">Tall</span><br> 
+		<label for="Salary">Salary:</label> 
+		<span id="income1">Poor</span><input type="range" min="0" max="100" step="5" value="50" 
+			id="salary" name="salary"><span id="income2">Rich</span>
+</fieldset> 
+
+<fieldset> 
+	<legend> Your Contact Information </legend> 
+		<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required><br>
+		<label for="mobile">Mobile:</label>
+			<input type="tel" id="mobile" name="mobile"><br>
+		<label for="address">Address:</label>
+			<textarea rows="2" cols="20" id="address" name="address"></textarea><br><br><br>
+		<label for="contact">Method to contact you:</label>
+			<input type="checkbox" id="contact" name="contact"> Email<input type= "checkbox">Whatsapp <input type= "checkbox"> In-app chat </p> 
+</fieldset> 
+			<input type="submit" value="Submit"> 
+</form>
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body> 
+</html>
